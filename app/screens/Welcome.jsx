@@ -3,7 +3,7 @@ import React from "react";
 import { Image } from "react-native";
 import { Pressable } from "react-native";
 
-export default function Home({ navigation }) {
+export default function Welcome({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -13,7 +13,7 @@ export default function Home({ navigation }) {
       <Text style={styles.heading}>Track Your Expenses, Reach Your Goals</Text>
       <Pressable
         style={styles.button}
-        onPress={() => navigation.navigate("dashboard")}
+        onPress={() => navigation.navigate("home")}
       >
         <Text style={{ color: "#fff" }}>Go to dashboard</Text>
       </Pressable>
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    padding: 20,
   },
   heading: {
     fontWeight: "bold",

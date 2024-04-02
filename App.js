@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "./app/screens/index";
-import Dashboard from "./app/screens/dashboard";
+import Welcome from "./app/screens/Welcome";
+import Home from "./app/screens/Home";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -10,8 +10,8 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="welcome" component={Welcome} />
         <Stack.Screen name="home" component={Home} />
-        <Stack.Screen name="dashboard" component={Dashboard} />
       </Stack.Navigator>
     </NavigationContainer>
   );

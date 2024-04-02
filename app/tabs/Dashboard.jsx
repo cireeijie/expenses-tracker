@@ -70,6 +70,7 @@ export default function Dashboard({ navigation }) {
           renderItem={({ item }) => (
             <RecentTransaction
               title={item.title}
+              type={item.type}
               category={item.category}
               paymentMethod={item.paymentMethod}
               amount={item.amount}
