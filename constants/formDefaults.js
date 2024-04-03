@@ -107,4 +107,10 @@ export const defaultFormValues = {
       },
     ],
   },
+  paymentMethods: [
+    { id: 1, name: "Cash" },
+    { id: 2, name: "Credit/Debit Card" },
+    { id: 3, name: "Gcash" },
+    { id: 4, name: "PayMaya" },
+  ],
 };

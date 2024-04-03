@@ -2,6 +2,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { defaultFormValues } from "../constants/formDefaults";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { amountSeparator } from "../utils/amountSeparator";
 
 export default function RecentTransaction({
   title,
@@ -61,7 +62,9 @@ export default function RecentTransaction({
         <Text style={{ textTransform: "capitalize" }}>{paymentMethod}</Text>
       </View>
       <View style={{ alignItems: "flex-end" }}>
-        <Text>{`${type === "Income" ? "+" : "-"}$${amount}`}</Text>
+        <Text style={{ color: type === "Expense" ? "#FF725E" : "#9BCF53" }}>{`${
+          type === "Income" ? "+" : "-"
+        }${amountSeparator(amount, true)}`}</Text>
         <Text>{date}</Text>
       </View>
     </Pressable>

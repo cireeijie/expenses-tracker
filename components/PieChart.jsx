@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { Circle, Svg } from "react-native-svg";
 
 export default function PieChart({ size, strokeWidth, data }) {

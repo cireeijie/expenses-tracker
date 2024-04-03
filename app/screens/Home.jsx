@@ -6,13 +6,16 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 import Dashboard from "../tabs/Dashboard";
 import Transactions from "../tabs/Transactions";
-import NewTransaction from "../tabs/NewTransaction";
 import Wallet from "../tabs/Wallet";
 import Profile from "../tabs/Profile";
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function Home({ navigation }) {
+  const screenOptions = {
+    unmountOnBlur: true,
+    headerShown: false,
+  };
   return (
     <Tab.Navigator
       activeColor="#FF725E"
@@ -20,8 +23,9 @@ export default function Home({ navigation }) {
       activeIndicatorStyle={{ backgroundColor: "transparent" }}
       barStyle={{
         backgroundColor: "#f9f9f9",
-        padding: 10,
+        padding: 0,
       }}
+      screenOptions={{ screenOptions }}
     >
       <Tab.Screen
         name="dashboard"
@@ -40,7 +44,7 @@ export default function Home({ navigation }) {
           tabBarLabel: "Transactions",
           tabBarAccessibilityLabel: "Transactions",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="pricetags-outline" color={color} size={22} />
+            <Ionicons name="swap-horizontal-outline" color={color} size={22} />
           ),
         }}
       />

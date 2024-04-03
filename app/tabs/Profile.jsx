@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import AnimatedView from "../../utils/AnimatedView";
 
 export default function Profile() {
   return (
-    <View>
-      <Text>Profile</Text>
-    </View>
+    <AnimatedView>
+      <View>
+        <Text>Profile</Text>
+      </View>
+    </AnimatedView>
   );
 }
 
